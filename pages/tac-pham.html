@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background: #333;
+      padding: 10px 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px;
+    }
+
+    .nav ul li a:hover {
+      background: #555;
+    }
+
+    /* Icon menu (ẩn mặc định) */
+    .menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Checkbox để điều khiển menu mobile */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Responsive cho mobile */
+    @media (max-width: 950px) {
+      .nav ul {
+      display: none;        /* Ẩn menu */
+      flex-direction: column; /* Xếp menu theo cột */
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #444;
+    }
+
+      /* Khi checkbox được chọn thì hiện menu */
+      #menu-toggle:checked + label + .nav ul {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">MySite</div>
+
+    <!-- Checkbox để bật/tắt menu -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <div class="nav">
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Dịch vụ</a></li>
+        <li><a href="#">Chuyên viên</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

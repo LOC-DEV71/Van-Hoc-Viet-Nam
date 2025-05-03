@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu đơn giản</title>
+  <style>
+    /* Nút danh mục */
+    .menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu-btn {
+      background: #444;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Danh sách ẩn ban đầu */
+    .menu-list {
+        display: none;
+
+      position: absolute;
+      background: #fff;
+      min-width: 150px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 1;
+    }
+
+    /* Mục trong danh sách */
+    .menu-list a {
+      display: block;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .menu-list a:hover {
+      background: #eee;
+    }
+
+    /* Hiện menu khi hover */
+    .menu:hover .menu-list {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="menu">
+    <button class="menu-btn">Danh mục</button>
+    <div class="menu-list">
+      <a href="#">Trang chủ</a>
+      <a href="#">Dịch vụ</a>
+      <a href="#">Chuyên viên</a>
+      <a href="#">Liên hệ</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
