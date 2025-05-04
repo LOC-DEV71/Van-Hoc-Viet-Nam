@@ -7,10 +7,16 @@
 .header{
     padding: 0px;
     border: 1px solid var(--color-text);
+    position: sticky;
+    background: #ffffff36;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 .header .header-menu{
-    padding: 10px 100px;
+    padding: 1px 100px;
 }
 
 .header-main .header-top{
